@@ -26,6 +26,7 @@ app.post("/api/order", async (req, res) => {
     const order = await razorpay.orders.create(orderOptions);
 
     res.json({ order });
+    return;
   } catch (error) {
     console.error("Error creating order:", error);
     res
