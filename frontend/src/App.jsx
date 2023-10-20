@@ -21,6 +21,13 @@ export default function RazorPay() {
           order_id: response.data.order.id,
           handler: (res) => {
             console.log(res);
+            alert("Payment Successful");
+         var orderID = res.razorpay_order_id;
+         var paymentID = res.razorpay_payment_id;
+
+         var message = "Order ID: " + orderID + "\nPayment ID: " + paymentID;
+         alert(message);
+
           },
         };
 
